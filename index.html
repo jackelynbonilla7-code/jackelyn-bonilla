@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/img/logo-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo-192.png">
 <link rel="apple-touch-icon" href="assets/img/logo-180.png">
@@ -51,10 +52,27 @@
 
 <!-- Cargador -->
 <div class="loader" id="loader" role="status" aria-label="Cargando">
+  <div class="ld-panel ld-top"></div><div class="ld-panel ld-bot"></div>
+  <div class="ld-grid" aria-hidden="true"></div>
   <div class="loader-core">
-    <div class="loader-orb"><img class="loader-logo" src="assets/img/logo-512.webp" alt="" width="96" height="96" decoding="async"></div>
+    <div class="ld-stage">
+      <svg class="ld-rings" viewBox="0 0 200 200" aria-hidden="true"><circle class="r1" cx="100" cy="100" r="92"/><circle class="r2" cx="100" cy="100" r="78"/><circle class="r3" cx="100" cy="100" r="64"/></svg>
+      <svg class="ld-logo" viewBox="0 0 200 160" aria-hidden="true">
+        <defs><linearGradient id="ldLeaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#86efac"/><stop offset="1" stop-color="#16a34a"/></linearGradient></defs>
+        <path class="ld-draw d1" pathLength="1" d="M54 30H146a6 6 0 0 1 6 6V104H48V36a6 6 0 0 1 6-6Z"/>
+        <path class="ld-draw d2" pathLength="1" d="M30 112H170L163 124a6 6 0 0 1-6 4H43a6 6 0 0 1-6-4Z"/>
+        <g class="ld-candles"><g style="--i:0"><line x1="66" x2="66" y1="84" y2="98"/><rect x="62" y="88" width="8" height="8"/></g><g style="--i:1"><line x1="80" x2="80" y1="74" y2="96"/><rect x="76" y="80" width="8" height="12"/></g><g style="--i:2"><line x1="94" x2="94" y1="70" y2="92"/><rect x="90" y="76" width="8" height="10"/></g><g style="--i:3"><line x1="108" x2="108" y1="58" y2="84"/><rect x="104" y="64" width="8" height="14"/></g><g style="--i:4"><line x1="122" x2="122" y1="54" y2="76"/><rect x="118" y="58" width="8" height="12"/></g><g style="--i:5"><line x1="136" x2="136" y1="42" y2="66"/><rect x="132" y="46" width="8" height="14"/></g></g>
+        <path class="ld-draw d3" pathLength="1" d="M60 98C88 94 112 80 140 48"/>
+        <path class="ld-draw d4" pathLength="1" d="M128 47H141V60"/>
+        <path class="ld-leaf" d="M40 112C38 96 44 86 58 80C60 96 54 108 40 112Z"/>
+        <path class="ld-leaf l2" d="M40 112C40 98 30 90 18 90C18 102 26 110 40 112Z"/>
+      </svg>
+      <span class="ld-scan" aria-hidden="true"></span>
+    </div>
+    <div class="ld-name">JACKELYN <b>BONILLA</b></div>
+    <div class="ld-sub">Habilidades digitales · Trading · Marketing</div>
     <div class="loader-bar"><i id="loaderBar"></i></div>
-    <small>Iniciando experiencia</small>
+    <div class="ld-meta"><span id="loaderPct">0</span>% &nbsp;·&nbsp; iniciando experiencia</div>
   </div>
 </div>
 

@@ -14,6 +14,8 @@ window.SITE_CONFIG = {
   freeClassesUrl: "",
   /* Libro Premium ARC: enlace directo a tu WhatsApp */
   premiumArcUrl: "https://wa.link/4cbbty",
+  /* Portal de herramientas con IA para analizar el mercado (WhatsApp) */
+  aiToolsUrl: "https://wa.link/8s9050",
 
   /* ✏️ 2) WHATSAPP — número con código de país, SOLO dígitos (sin +, espacios ni guiones).
      Ejemplo México: "5215512345678"  ·  Ejemplo Colombia: "573001234567" */

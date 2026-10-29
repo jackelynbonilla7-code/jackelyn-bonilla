@@ -78,6 +78,7 @@
     'sobre-mi': 'Esta es mi historia: ¿por qué elegí el mundo digital?',
     'habilidades': 'El mundo cambia rápido. Con el sistema ARC: Aprende, Resultados y Constancia 🔁',
     'trading': 'Trading educativo: practica en demo y cuida siempre tu capital.',
+    'trading-ia': 'Bienvenida al portal: mis 6 scanners con IA ayudan en Forex, criptos y copytrading. ¡La IA ayuda, tú decides!',
     'clases': 'Aquí están las clases gratis de trading: fundamentos, gráficos, riesgo y psicología. ¡Pulsa el botón morado!',
     'marketing': 'Marketing digital: del gancho a la llamada a la acción.',
     'mentalidad': 'Hábitos y probabilidades: entrena tu mente cada día 🧠',

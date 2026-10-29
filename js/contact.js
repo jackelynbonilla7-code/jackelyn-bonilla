@@ -17,6 +17,8 @@
 
   /* Clases gratis de trading: enlace propio o, si está vacío, la comunidad */
   $$('[data-classes]').forEach(a => { const u = validUrl(cfg.freeClassesUrl) ? cfg.freeClassesUrl : cfg.communityUrl; if (validUrl(u)) { a.href = u; external(a); } else a.addEventListener('click', e => { e.preventDefault(); window.JB.notConfigured('Las clases abren muy pronto', 'Estamos preparando el enlace. Escríbeme por WhatsApp y te cuento.', 'pega tu enlace en freeClassesUrl o communityUrl.'); }); });
+  /* Portal de herramientas con IA */
+  $$('[data-ai]').forEach(a => { if (validUrl(cfg.aiToolsUrl)) { a.href = cfg.aiToolsUrl; external(a); } else a.addEventListener('click', e => { e.preventDefault(); window.JB.notConfigured('Muy pronto', 'Estamos preparando este enlace. Escríbeme por WhatsApp y te cuento.', 'pega tu enlace en aiToolsUrl dentro de js/config.js.'); }); });
   /* Libro Premium ARC */
   $$('[data-premium]').forEach(a => { if (validUrl(cfg.premiumArcUrl)) { a.href = cfg.premiumArcUrl; external(a); } });
 

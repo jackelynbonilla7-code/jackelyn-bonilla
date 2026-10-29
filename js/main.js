@@ -129,9 +129,9 @@
   }
 
   /* ---------- Ventanas (una sección a la vez, con transición 3D) ---------- */
-  const ORDER = ['inicio', 'sobre-mi', 'habilidades', 'trading', 'clases', 'marketing', 'mentalidad', 'resultados', 'biblioteca', 'comunidad', 'contacto'];
-  const LABELS = { 'inicio': 'Inicio', 'sobre-mi': 'Sobre mí', 'trading': 'Trading', 'clases': 'Clases gratis de trading', 'marketing': 'Marketing digital', 'habilidades': 'Habilidades digitales', 'mentalidad': 'Mentalidad', 'resultados': 'Resultados', 'biblioteca': 'Biblioteca PDF', 'comunidad': 'Comunidad', 'contacto': 'Contacto' };
-  const ACCENT = { 'inicio': 'violet', 'sobre-mi': 'orchid', 'trading': 'indigo', 'clases': 'violet', 'marketing': 'fuchsia', 'habilidades': 'violet', 'mentalidad': 'lilac', 'resultados': 'orchid', 'biblioteca': 'indigo', 'comunidad': 'fuchsia', 'contacto': 'orchid' };
+  const ORDER = ['inicio', 'sobre-mi', 'habilidades', 'trading', 'trading-ia', 'clases', 'marketing', 'mentalidad', 'resultados', 'biblioteca', 'comunidad', 'contacto'];
+  const LABELS = { 'inicio': 'Inicio', 'sobre-mi': 'Sobre mí', 'trading': 'Trading', 'trading-ia': 'Trading con IA', 'clases': 'Clases gratis de trading', 'marketing': 'Marketing digital', 'habilidades': 'Habilidades digitales', 'mentalidad': 'Mentalidad', 'resultados': 'Resultados', 'biblioteca': 'Biblioteca PDF', 'comunidad': 'Comunidad', 'contacto': 'Contacto' };
+  const ACCENT = { 'inicio': 'violet', 'sobre-mi': 'orchid', 'trading': 'indigo', 'trading-ia': 'violet', 'clases': 'violet', 'marketing': 'fuchsia', 'habilidades': 'violet', 'mentalidad': 'lilac', 'resultados': 'orchid', 'biblioteca': 'indigo', 'comunidad': 'fuchsia', 'contacto': 'orchid' };
   JB.ORDER = ORDER; JB.LABELS = LABELS; JB.view = null;
   const hashId = () => { const id = decodeURIComponent((location.hash || '').slice(1)); return ORDER.includes(id) ? id : 'inicio'; };
   function show(id) {

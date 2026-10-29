@@ -302,19 +302,19 @@
   window.addEventListener('pointermove', e => { pm.x = e.clientX; pm.y = e.clientY; }, { passive: true });
 
   /* ---------- Cargador ---------- */
-  const loader = $('#loader'), bar = $('#loaderBar');
+  const loader = $('#loader'), bar = $('#loaderBar'), pctEl = $('#loaderPct');
   let loaded = false, pct = 0, started = performance.now();
   function finishLoad() {
-    if (loaded) return; loaded = true; bar.style.width = '100%';
-    const wait = Math.max(0, 1000 - (performance.now() - started));
+    if (loaded) return; loaded = true; bar.style.width = '100%'; const wait = Math.max(0, 2300 - (performance.now() - started));
+    if (pctEl) { const p0 = pct, t0 = performance.now(), dur = Math.max(300, wait); (function up() { const k = Math.min(1, (performance.now() - t0) / dur); pctEl.textContent = Math.round(p0 + (100 - p0) * k); if (k < 1) requestAnimationFrame(up); })(); }
     setTimeout(() => {
       loader.classList.add('done'); root.classList.add('ready');
       const body = $('#robotBody'); body && body.classList.add('robot-enter');
-      setTimeout(() => { loader.remove(); }, 1000);
+      setTimeout(() => { loader.remove(); }, 1500);
       window.dispatchEvent(new CustomEvent('jb:ready'));
     }, wait + 120);
   }
-  const tick = setInterval(() => { pct = Math.min(90, pct + 6 + Math.random() * 9); if (!loaded) bar.style.width = pct + '%'; else clearInterval(tick); }, 120);
+  const tick = setInterval(() => { pct = Math.min(90, pct + 6 + Math.random() * 9); if (!loaded) { bar.style.width = pct + '%'; if (pctEl) pctEl.textContent = Math.round(pct); } else clearInterval(tick); }, 120);
   if (doc.readyState === 'complete') finishLoad(); else window.addEventListener('load', finishLoad);
   setTimeout(finishLoad, 3500);
 

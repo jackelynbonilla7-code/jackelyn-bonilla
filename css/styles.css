@@ -1088,3 +1088,10 @@ html.reduce .cn,html.reduce .cl-ma,html.reduce .cl-area,html.reduce .cl-float,ht
 .arc-step h4{margin:0 0 4px;font-size:1.15rem}.arc-step p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.4}
 .arc-arrow{align-self:center;color:var(--p-300);font-size:1.5rem}
 @media (max-width:900px){.arc-flow{grid-template-columns:1fr}.arc-arrow{transform:rotate(90deg);justify-self:center;line-height:1;margin:-4px 0;font-size:1.2rem}.arc-step .arc-l{font-size:3rem;width:44px;text-align:center}}
+
+.loader-logo{width:64px;height:64px;filter:drop-shadow(0 0 16px var(--p-500));animation:loaderPulse 2s ease-in-out infinite}
+@keyframes loaderPulse{50%{transform:scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.loader-logo{animation:none}}
+
+.loader-logo{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.loader-orb{width:132px;height:132px}
